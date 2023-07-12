@@ -1,0 +1,30 @@
+document.querySelector("#valor1")!.addEventListener("input",(event:any)=>{
+    const onlyDigits = (<String>event.target.value)
+        .split("")
+        .filter((s:any) => /\d/.test(s))
+        .join("")
+        .padStart(3, "0")
+    const digitsFloat = onlyDigits.slice(0, -2) + "." + onlyDigits.slice(-2)
+    event.target.value = maskCurrency(digitsFloat)
+})
+
+document.querySelector("#valor2")!.addEventListener("input",(event:any)=>{
+    const onlyDigits = (<String>event.target.value)
+        .split("")
+        .filter((s:any) => /\d/.test(s))
+        .join("")
+        .padStart(3, "0")
+    const digitsFloat = onlyDigits.slice(0, -2) + "." + onlyDigits.slice(-2)
+    event.target.value = maskCurrency(digitsFloat)
+})
+
+let maskCurrency = (valor:any, locale = 'pt-BR', currency = 'BRL') => {
+    return new Intl.NumberFormat(locale, {
+        style: 'currency',
+        currency
+    }).format(valor)
+}
+
+
+
+
