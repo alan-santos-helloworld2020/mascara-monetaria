@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./src/style.scss">
   <title>Vite + TS</title>
 </head>
+
 <body>
   <div class="row">
     <div class="col s6 push-s3">
@@ -25,9 +26,36 @@
           <input type="text" id="valor2" name="valor2">
           <label for="valor2">Valor 2</label>
         </div>
+        <div class="input-field col s6">
+          <input type="text" id="valor3" name="valor3">
+          <label for="valor3">Valor 3</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <button class="btn waves-effect waves-light right" type="submit" id="action" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <table class="responsive-table centered striped">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>DATA</th>
+                <th>VALOR</th>
+              </tr>
+            </thead>
+              <tbody>
+              </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
   <script type="module" src="/src/main.ts"></script>
 </body>
+
 </html>
